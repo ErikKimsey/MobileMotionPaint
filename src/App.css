@@ -1,8 +1,12 @@
 .App {
+  max-width:412px;
+  width:98vw;
+  height:604px;
   text-align: center;
 }
 
 .App-logo {
+  position: absolute;
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
 }
