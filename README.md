@@ -1,3 +1,3 @@
-## MDMP
-#### Multi-sensorial Artistic Creation
+# MDMP
+#### Multi-Sensorial Artistic Creation
 ### by Erik Kimsey
