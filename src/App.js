@@ -1,39 +1,37 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import MobileDetect from './utilities/mobile_detect';
+import deviceOrientation from './device_motion_orientation/orientation';
+import './App.scss';
 
 
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      isMobile: null,
+    };
+  }
 
   componentDidMount(){
-    let app = document.querySelector('.App');
-    // console.log(app);
-    app.style.width = window.innerWidth;
-    app.style.height = window.innerHeight;
-    window.addEventListener("deviceorientation", this.handleOrientation, true);
+    if(MobileDetect() === true){
+      console.log("mobile!@");
+      this.setState({isMobile: true});
+      window.addEventListener('deviceorientation', this.handleOrientation, false);
+      window.addEventListener('devicemotion', this.handleMotion, false);
+    } else {
+      console.log("desktop!!");
+      this.setState({isMobile: false});
+    }
   }
 
-  moveIcon = (dimens) => {
-    let image = document.querySelector('img');
-    let iw = 604;
-    let ih = 412;
-    // console.log("height: ", ih);
-    console.log("dim alpha:", dimens.alpha);
-    console.log("dim beta:", dimens.beta);
-    console.log("dim gamma:", dimens.gamma);
-    
-    let xpos = (ih * dimens.alpha)/360;
-    // console.log("xpos: ", xpos);
-    
-    image.style.top = xpos + "px";
+  handleMotion = (e) => {
+
   }
 
-  handleOrientation = (event) => {
-    // event.preventDefault();
-    // console.log(event);
-    
-    this.moveIcon(event);
+  handleOrientation = (e) => {
+    deviceOrientation(e);
   }
 
   render() {
