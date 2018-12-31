@@ -9,7 +9,7 @@ import map from '../utilities/map';
 
 
 
-const colorManifestorIzer = () => {
+const colorManifestorIzer = (aVal,bVal,gVal) => {
 
 };
 

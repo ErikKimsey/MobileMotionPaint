@@ -20,7 +20,7 @@ const constrain = function(n, low, high) {
 
 const map = function(n, start1, stop1, start2, stop2, withinBounds) {
   // p5._validateParameters('map', arguments);
-  var newval = (n - start1) / (stop1 - start1) * (stop2 - start2) + start2;
+  let newval = (n - start1) / (stop1 - start1) * (stop2 - start2) + start2;
   if (!withinBounds) {
     return newval;
   }
