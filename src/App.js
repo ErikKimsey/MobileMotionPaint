@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import MobileDetect from './utilities/mobile_detect';
+import P5Wrapper from './utilities/p5Wrapper';
+import thePainting from './painting/paint';
 import deviceOrientation from './device_motion_orientation/orientation';
 import './App.scss';
 
@@ -20,6 +21,7 @@ class App extends Component {
       this.setState({isMobile: true});
       window.addEventListener('deviceorientation', this.handleOrientation, false);
       window.addEventListener('devicemotion', this.handleMotion, false);
+      window.addEventListener('devicemotion', this.handleMotion, false);
     } else {
       console.log("desktop!!");
       this.setState({isMobile: false});
@@ -27,10 +29,11 @@ class App extends Component {
   }
 
   handleMotion = (e) => {
-
+    // painting
   }
 
   handleOrientation = (e) => {
+    // picking color
     deviceOrientation(e);
   }
 
@@ -38,7 +41,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <P5Wrapper sketch={thePainting}/>
         </header>
       </div>
     );

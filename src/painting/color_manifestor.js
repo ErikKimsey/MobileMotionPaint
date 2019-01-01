@@ -7,10 +7,15 @@ import map from '../utilities/map';
  * 5. Return RGB color
  */
 
+const rgbStart = 0, rgbEnd = 255;
 
-
-const colorManifestorIzer = (aVal,bVal,gVal) => {
-
+const colorManifestorIzer = (evts, ornt) => {
+  // console.log("e forom color manif >> ",ornt.alpha);
+  let a = evts.alpha, b = evts.beta, g = evts.gamma;
+  let green = map(b, ornt.beta.start, ornt.beta.end, rgbStart, rgbEnd, true);  
+  let red = map(a, ornt.alpha.start, ornt.alpha.end, rgbStart, rgbEnd, true);  
+  let blue = map(g, ornt.gamma.start, ornt.gamma.end, rgbStart, rgbEnd, true);  
+  console.log(map(a, ornt.alpha.start, ornt.alpha.end, rgbStart, rgbEnd, true));
 };
 
 
