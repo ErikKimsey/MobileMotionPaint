@@ -3,8 +3,10 @@
  * @param 
  */
 
- const deviceMotion = () => {
 
- }
 
- export default deviceMotion;
+const deviceMotion = () => {
+
+}
+
+export default deviceMotion;

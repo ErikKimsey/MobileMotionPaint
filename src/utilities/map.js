@@ -32,9 +32,9 @@ const map = function(n, start1, stop1, start2, stop2, withinBounds) {
 };
 
 
-console.log(map(3, -180, 180, 0, 255, true));
-console.log(map(180, -90, 90, 0, 255, true));
-console.log(map(270, 0, 360, 0, 255, true));
+// console.log(map(3, -180, 180, 0, 255, true));
+// console.log(map(180, -90, 90, 0, 255, true));
+// console.log(map(270, 0, 360, 0, 255, true));
 
 export default map;
 

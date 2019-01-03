@@ -31,6 +31,8 @@ class App extends Component {
   
   handleMotion = (e) => {
     // painting
+    console.log("motion lotion >>> ",e.acceleration);
+    
   }
   
   handleOrientation = (e) => {
