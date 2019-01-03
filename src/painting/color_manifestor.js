@@ -10,14 +10,13 @@ import map from '../utilities/map';
 const rgbStart = 0, rgbEnd = 255;
 
 const colorManifestorIzer = (evts, ornt) => {
+  let theColor = {r: 0, g: 0, b: 0};
   // console.log("e forom color manif >> ",ornt.alpha);
   let a = evts.alpha, b = evts.beta, g = evts.gamma;
-  let green = map(b, ornt.beta.start, ornt.beta.end, rgbStart, rgbEnd, true);  
-  let red = map(a, ornt.alpha.start, ornt.alpha.end, rgbStart, rgbEnd, true);  
-  let blue = map(g, ornt.gamma.start, ornt.gamma.end, rgbStart, rgbEnd, true);  
-  console.log(map(a, ornt.alpha.start, ornt.alpha.end, rgbStart, rgbEnd, true));
+  theColor.r = map(a, ornt.alpha.start, ornt.alpha.end, rgbStart, rgbEnd, true);
+  theColor.g = map(b, ornt.beta.start, ornt.beta.end, rgbStart, rgbEnd, true);
+  theColor.b = map(g, ornt.gamma.start, ornt.gamma.end, rgbStart, rgbEnd, true);
+  return theColor;
 };
-
-
 
 export default colorManifestorIzer;

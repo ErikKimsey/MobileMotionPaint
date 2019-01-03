@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "OddTreatment's Odd Paint",
+  "name": "OddTreatment's Mobile Odd Paint - by Erik Kimsey",
   "icons": [
     {
       "src": "favicon.ico",
@@ -9,7 +9,8 @@
     }
   ],
   "start_url": ".",
-  "display": "standalone",
+  "display": "fullscreen",
+  "orienation":"portrait",
   "theme_color": "#000000",
   "background_color": "#ffffff"
 }
