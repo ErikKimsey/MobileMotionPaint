@@ -4,7 +4,9 @@ import P5Wrapper from './utilities/p5Wrapper';
 import thePainting from './painting/paint';
 import colorManifestorIzer from './painting/color_manifestor';
 import deviceOrientation, {nuColor} from './device_motion_orientation/orientation';
+import deviceMotion from './device_motion_orientation/motion';
 import './App.scss';
+import strokeManifestorizer from './painting/stroke_manifestorizor';
 
 
 class App extends Component {
@@ -16,7 +18,6 @@ class App extends Component {
   }
   
   componentDidMount(){
-    window.scrollTo(0,1);
     if(MobileDetect() === true){
       console.log("mobile!@");
       this.setState({isMobile: true});
@@ -30,9 +31,8 @@ class App extends Component {
   }
   
   handleMotion = (e) => {
-    // painting
     console.log("motion lotion >>> ",e.acceleration);
-    
+    deviceMotion(e);
   }
   
   handleOrientation = (e) => {
