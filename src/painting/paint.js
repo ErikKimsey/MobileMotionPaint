@@ -1,5 +1,7 @@
 import {nuColor, snapColor, isTouched} from '../device_motion_orientation/orientation';
-
+import map from '../utilities/map';
+import {strokeMoveX} from '../device_motion_orientation/motion';
+// console.log(strokeMoveX);
 /**
  * @method thePainting
  * @param props
@@ -10,7 +12,9 @@ const makePermColor = (c) => {
 }
 
 
+
 const thePainting = (p) => {
+
   let w = window.innerWidth;
   let h = window.innerHeight;
   let stillChoosing = false;
@@ -27,9 +31,10 @@ const thePainting = (p) => {
   }
   
   p.draw = () => {
+    
     p.background('#000');
     if(isTouched === false){
-      p.ellipse(0, 0, 140, 140);
+      p.ellipse(0, 0, strokeMoveX-140, strokeMoveX-140);
       p.fill(nuColor.r,nuColor.g,nuColor.b);
     } else {
       p.ellipse(0, 0, 140, 140);

@@ -1,14 +1,14 @@
 import strokeManifestorizer from '../painting/stroke_manifestorizor';
 
-let eventsHorizon;
+let eventsHorizon, strokeMove, strokeMoveX=0, strokeMoveY;
 const motionConstants = {
   x: {
-    start: 20,
-    end:20,
+    start: -50,
+    end:50,
   },
   y: {
-    start: 20,
-    end:20,
+    start: -50,
+    end:50,
   }
 };
 
@@ -18,7 +18,9 @@ const motionConstants = {
  */
 const deviceMotion = (e) => {
   eventsHorizon = e;
-  let strokeMove = strokeManifestorizer(eventsHorizon, motionConstants);
+  strokeMove = strokeManifestorizer(eventsHorizon, motionConstants);
+  strokeMoveX = strokeMove.x;
 }
 
 export default deviceMotion;
+export {strokeMove, strokeMoveX};

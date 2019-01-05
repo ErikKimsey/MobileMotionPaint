@@ -12,6 +12,7 @@ const strokeManifestorizer = (evts, motown) => {
   let strokeY = map( yAcc,motown.y.start, motown.y.end, 0, height, true);
   
   let stroke = {x:strokeX, y: strokeY};
+
   return stroke;
 };
 

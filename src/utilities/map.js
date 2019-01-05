@@ -19,8 +19,12 @@ const constrain = function(n, low, high) {
 */
 
 const map = function(n, start1, stop1, start2, stop2, withinBounds) {
+  // console.log(`start1 : ${start1}`);
+  
   // p5._validateParameters('map', arguments);
   let newval = (n - start1) / (stop1 - start1) * (stop2 - start2) + start2;
+  // console.log(`nuval >>> ${newval}`);
+  
   if (!withinBounds) {
     return newval;
   }
