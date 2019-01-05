@@ -17,7 +17,8 @@ const thePainting = (p) => {
   let chosenColor = {};
   
   p.redrawOnNewProps = (props) => {
-    
+    w = props.state.w;
+    h = props.state.h;
   }   
   
   p.setup = () => {
@@ -27,16 +28,18 @@ const thePainting = (p) => {
   
   p.draw = () => {
     p.background('#000');
+    if(isTouched === false){
       p.ellipse(0, 0, 140, 140);
-      p.fill('#fff');
-    // if(isTouched === false){
-    //   p.ellipse(0, 0, 140, 140);
-    //   p.fill(nuColor.r,nuColor.g,nuColor.b);
-    // } else {
-    //   p.ellipse(0, 0, 140, 140);
-    //   p.fill(snapColor.r,snapColor.g,snapColor.b);
-    // }
-  } 
+      p.fill(nuColor.r,nuColor.g,nuColor.b);
+    } else {
+      p.ellipse(0, 0, 140, 140);
+      p.fill(snapColor.r,snapColor.g,snapColor.b);
+    }
+  }
+  
+  p.windowResized = () => {
+    p.resizeCanvas(window.innerWidth, window.innerHeight);
+  }
   
 }
 

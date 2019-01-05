@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import p5 from 'p5';
 
 class P5Wrapper extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+
+    };
+    console.log(props);
+    
+  }
 
   componentDidMount() {
     this.canvas = new p5(this.props.sketch, this.wrapper);

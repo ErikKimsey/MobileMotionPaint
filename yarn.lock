@@ -8166,6 +8166,11 @@ react-redux@^6.0.0:
     prop-types "^15.6.2"
     react-is "^16.6.3"
 
+react-screen-orientation@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/react-screen-orientation/-/react-screen-orientation-0.0.3.tgz#ae8482f9823b088b9b1790004509311f4cebc6f3"
+  integrity sha512-M7wI/uyv2vP+6ZNcw3Bp30NVf8xyST2k66wghYvE+8+/NExRxAcHiJs2FzJBUcIjMJs0YgCn1KxSvtIao3Luyw==
+
 react-scripts@2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/react-scripts/-/react-scripts-2.1.2.tgz#cf1686cd9ca3c6148e1428e97aac12995f01b554"

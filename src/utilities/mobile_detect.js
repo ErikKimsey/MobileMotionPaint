@@ -1,6 +1,6 @@
 
 const mobileDetect = () => {
-  console.log(window.navigator.userAgent);
+  // console.log(window.navigator.userAgent);
   return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 };
 
