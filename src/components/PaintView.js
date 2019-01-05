@@ -9,7 +9,7 @@ class PaintView extends Component {
   }
 
   componentDidMount(){
-    console.log("hello from PaintView");
+    
   }
 
   render(){

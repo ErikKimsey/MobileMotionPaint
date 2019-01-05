@@ -26,14 +26,12 @@ class App extends Component {
       window.addEventListener('devicemotion', this.handleMotion, false);
       window.addEventListener('devicemotion', this.handleMotion, false);
     } else {
-      console.log("desktop!!");
       this.setState({isMobile: false});
     }
   }
 
   
   handleMotion = (e) => {
-    // console.log("motion lotion >>> ",e.acceleration);
     deviceMotion(e);
   }
   

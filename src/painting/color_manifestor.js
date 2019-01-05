@@ -11,7 +11,6 @@ const rgbStart = 0, rgbEnd = 255;
 
 const colorManifestorIzer = (evts, ornt) => {
   let theColor = {r: 0, g: 0, b: 0};
-  // console.log("e forom color manif >> ",ornt.alpha);
   let a = evts.alpha, b = evts.beta, g = evts.gamma;
   theColor.r = map(a, ornt.alpha.start, ornt.alpha.end, rgbStart, rgbEnd, true);
   theColor.g = map(b, ornt.beta.start, ornt.beta.end, rgbStart, rgbEnd, true);

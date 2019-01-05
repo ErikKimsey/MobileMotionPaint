@@ -6,7 +6,6 @@ const strokeManifestorizer = (evts, motown) => {
   
   let xAcc = evts.acceleration.x;
   let yAcc = evts.acceleration.y;
-  // console.log("xAcc >> ", xAcc);
   
   let strokeX = map( xAcc,motown.x.start, motown.x.end, 0, width, true);
   let strokeY = map( yAcc,motown.y.start, motown.y.end, 0, height, true);

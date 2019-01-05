@@ -1,17 +1,11 @@
 import {nuColor, snapColor, isTouched} from '../device_motion_orientation/orientation';
 import map from '../utilities/map';
 import {strokeMoveX} from '../device_motion_orientation/motion';
-// console.log(strokeMoveX);
+
 /**
  * @method thePainting
  * @param props
  */
-
-const makePermColor = (c) => {
-
-}
-
-
 
 const thePainting = (p) => {
 

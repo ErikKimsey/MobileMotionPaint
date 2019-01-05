@@ -7,8 +7,6 @@ class P5Wrapper extends Component {
     this.state = {
 
     };
-    console.log(props);
-    
   }
 
   componentDidMount() {
