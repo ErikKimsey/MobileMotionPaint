@@ -1,6 +1,6 @@
 import {nuColor, snapColor, isTouched} from '../device_motion_orientation/orientation';
 import map from '../utilities/map';
-import {strokeMoveX} from '../device_motion_orientation/motion';
+import {strokeMoveX, strokeMoveY} from '../device_motion_orientation/motion';
 
 /**
  * @method thePainting
@@ -28,7 +28,7 @@ const thePainting = (p) => {
     
     p.background('#000');
     if(isTouched === false){
-      p.ellipse(0, 0, strokeMoveX-140, strokeMoveX-140);
+      p.ellipse(0, 0, strokeMoveX*1.5, strokeMoveY);
       p.fill(nuColor.r,nuColor.g,nuColor.b);
     } else {
       p.ellipse(0, 0, 140, 140);
